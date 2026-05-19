@@ -1,5 +1,5 @@
 
-
+import './StarRating.css';
 import 'web.css';
 import React, { useState } from 'react';
  
