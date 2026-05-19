@@ -1,3 +1,5 @@
+
+
 const container = document.getElementById('starRating');
 let currentRating = 0;
 
