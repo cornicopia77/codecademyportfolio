@@ -1,6 +1,5 @@
 
 
-body{
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
@@ -66,4 +65,13 @@ body{
     background-opacity: 45%;
 }
     
+.parent {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 300px;           /* Height is needed for vertical centering */
+}
+
+.child {
+  margin: 20px;            /* Adds external spacing around the centered box */
 }
