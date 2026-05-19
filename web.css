@@ -89,3 +89,23 @@ body{
 .child {
   margin: 20px;            /* Adds external spacing around the centered box */
 }
+
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+.on .star {
+  color: gold;
+}
+
+.off .star {
+  color: #ccc;
+}
