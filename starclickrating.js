@@ -1,13 +1,4 @@
 
-
-
-console.log('Look at this');
-console.log(3.5);
-console.log('front' + 'loaded' + 'thats me')
-console.log('Codecademy'.toUpperCase())
-console.log(' Remove whitespace '.trim())
-
-
 const StarRating = () => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
