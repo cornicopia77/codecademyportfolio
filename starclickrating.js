@@ -1,34 +1,27 @@
+const container = document.getElementById('starRating');
+let currentRating = 0;
 
-import './StarRating.css';
-import 'web.css';
-import React, { useState } from 'react';
- 
- const StarRating = () => {
-     const [rating, setRating] = useState(0);
-     const [hover, setHover] = useState(0);
- 
-     return (
-         <div className="star-rating">
-            {[...Array(5)].map((_, index) => {
-                const starValue = index + 1;
-                return (
-                    <button
-                        key={starValue}
-                        type="button"
-                        className={starValue <= (hover || rating) ? 'on' : 'off'}
-                        onClick={() => setRating(starValue)}
-                        onMouseEnter={() => setHover(starValue)}
-                        onMouseLeave={() => setHover(0)}
-                        aria-label={`Rate ${starValue} star${starValue > 1 ? 's' : ''}`}
-                    >
-                        <span className="star">&#9733;</span>
-                    </button>
-                );
-            })}
-         </div>
-     );
- };
+for (let i = 1; i <= 5; i++) {
+  const btn = document.createElement('button');
+  btn.innerHTML = '&#9733;';
+  btn.dataset.value = i;
+  btn.setAttribute('aria-label', `Rate ${i} star${i > 1 ? 's' : ''}`);
 
-export default StarRating;
+  btn.addEventListener('click', () => {
+    currentRating = i;
+    updateStars(i);
+  });
+
+  btn.addEventListener('mouseenter', () => updateStars(i));
+  btn.addEventListener('mouseleave', () => updateStars(currentRating));
+
+  container.appendChild(btn);
+}
+
+function updateStars(rating) {
+  container.querySelectorAll('button').forEach(btn => {
+    btn.className = btn.dataset.value <= rating ? 'on' : 'off';
+  });
+}
  
  
