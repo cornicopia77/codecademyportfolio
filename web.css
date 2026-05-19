@@ -7,6 +7,7 @@ h1 {
 font-style: normal;
 font-display: block;
 font-size: larger;
+    font-color: white;
 }
 
 
@@ -38,6 +39,7 @@ p {
 table {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
+    font-color: white;
 
 }
 
@@ -55,7 +57,7 @@ td{
 
 
 body{
-    background-color: rgb(45,245, 56);
+    background-color: rgb(45,45, 56);
     background-opacity: 45%;
 }
     
