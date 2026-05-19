@@ -89,15 +89,15 @@ body{
 .child {
   margin: 20px;            /* Adds external spacing around the centered box */
 }
-.star-rating button {
+#starRating button {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 12rem;
+  font-size: 8rem;
   padding: 0 4px;
   color: gold;
 }
 
-.star-rating button:hover {
+#starRating button:hover {
   color: white;
 }
