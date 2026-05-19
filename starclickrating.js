@@ -1,4 +1,6 @@
 
+
+import 'web.css';
 import React, { useState } from 'react';
  
  const StarRating = () => {
