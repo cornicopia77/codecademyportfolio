@@ -1,5 +1,4 @@
 
-
 const container = document.getElementById('starRating');
 let currentRating = 0;
 
@@ -11,19 +10,8 @@ for (let i = 1; i <= 5; i++) {
 
   btn.addEventListener('click', () => {
     currentRating = i;
-    updateStars(i);
+    console.log(`Rated: ${currentRating} stars`);
   });
-
-  btn.addEventListener('mouseenter', () => updateStars(i));
-  btn.addEventListener('mouseleave', () => updateStars(currentRating));
 
   container.appendChild(btn);
 }
-
-function updateStars(rating) {
-  container.querySelectorAll('button').forEach(btn => {
-    btn.className = btn.dataset.value <= rating ? 'on' : 'off';
-  });
-}
- 
- 
